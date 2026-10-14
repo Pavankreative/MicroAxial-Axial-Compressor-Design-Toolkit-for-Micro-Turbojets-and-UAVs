@@ -1,0 +1,109 @@
+{
+    "machine_type": "axial",
+    "configuration": "compressor",
+    "definition": {
+        "gamma": 1.4,
+        "axial_velocity": 145,
+        "rpm": 64000,
+        "gas_constant": 287,
+        "mass_flow_rate": 0.6,
+        "pressure_ratio": 3.2,
+        "inlet_total_pressure": 101325,
+        "inlet_total_temperature": 288.15,
+        "isentropic_efficiency": 0.8,
+        "num_stages": 6,
+        "stage_temperature_rise": "equal",
+        "stage_reaction": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            0.5
+        ],
+        "inlet_blockage": 0.05,
+        "outlet_blockage": 0.08,
+        "hub_to_tip_ratio": 0.74,
+        "num_streams": 5,
+        "aspect_ratio": [
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            },
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            },
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            },
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            },
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            },
+            {
+                "rotor": 1.2,
+                "stator": 1.4
+            }
+        ],
+        "spacing_to_chord": [
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            },
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            },
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            },
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            },
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            },
+            {
+                "rotor": 0.7,
+                "stator": 0.7
+            }
+        ],
+        "max_thickness_to_chord": [
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            },
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            },
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            },
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            },
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            },
+            {
+                "rotor": 0.06,
+                "stator": 0.08
+            }
+        ],
+        "row_gap_to_chord": 0.25,
+        "stage_gap_to_chord": 0.4
+    }
+}

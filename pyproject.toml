@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "microaxial"
+version = "0.1.0"
+description = "Mean-line design, screening checks and off-design map estimation for micro-turbojet and UAV axial compressors"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Pavan" },
+]
+keywords = ["axial compressor", "micro turbojet", "UAV propulsion", "mean-line", "turbomachinery"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "click>=8.3.3",
+    "kaleido>=0.2.1",
+    "plotly>=5.11.0",
+    "numpy>=2.4.3",
+    "pydantic>=2.13.3",
+    "pandas>=3.0.2",
+]
+
+[project.optional-dependencies]
+cq = ["cadquery>=2.5.2"]
+test = ["pytest>=7.0"]
+
+[project.urls]
+Homepage = "https://github.com/Pavankreative/microaxial"
+
+[project.scripts]
+microaxial = "microaxial.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["microaxial*", "jupyter_cadquery*", "cq_warehouse*"]
+where = [".", "libs/jupyter-cadquery", "libs/cq_warehouse/src"]
+
+[tool.setuptools.package-data]
+microaxial = ["**/*.json"]
+cq_warehouse = ["*.csv"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
