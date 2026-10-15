@@ -26,3 +26,6 @@ jobs:
 
     - name: Run tests
       run: python -m pytest tests/ -v
+
+    - name: Independent mean-line cross-check
+      run: python validation/verify_meanline.py

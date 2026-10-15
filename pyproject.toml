@@ -33,7 +33,7 @@ cq = ["cadquery>=2.5.2"]
 test = ["pytest>=7.0"]
 
 [project.urls]
-Homepage = "https://github.com/Pavankreative/microaxial"
+Homepage = "https://github.com/Pavankreative/microaxial-axial-compressor-design-toolkit-for-micro-turbojets-and-uavs"
 
 [project.scripts]
 microaxial = "microaxial.cli:cli"
