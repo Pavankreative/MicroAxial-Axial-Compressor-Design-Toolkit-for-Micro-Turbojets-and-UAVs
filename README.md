@@ -396,3 +396,17 @@ for comparing candidates.
 MIT. See [LICENSE](LICENSE).
 
 > MicroAxial is a derivative work of [TurboDesigner](https://github.com/OpenOrion/turbodesigner) by Open Orion, Inc., used under the MIT License.
+
+## Preliminary micro-turbojet tool suite
+
+The target application is preliminary component design for **90–150 N UAV micro-turbojets**. This is an application target, not a verified engine thrust prediction.
+
+- [MicroBladeGen](https://github.com/Pavankreative/MicroBladeGen)
+- [MicroTurboGeo](https://github.com/Pavankreative/MicroTurboGeo)
+- [MicroAxial-Axial-Compressor-Design-Toolkit-for-Micro-Turbojets-and-UAVs](https://github.com/Pavankreative/MicroAxial-Axial-Compressor-Design-Toolkit-for-Micro-Turbojets-and-UAVs)
+
+MicroAxial supplies mean-line analytical screening; MicroBladeGen supplies blade geometry; MicroTurboGeo builds axial blade-passage fluid domains. These are complementary tools, not an automatically coupled or validated engine-design pipeline. Transfer requires explicit checks of units, coordinate axes, angle conventions, section ordering and hub/tip radii. Centrifugal impeller output is not a direct MicroTurboGeo axial-domain input. Existing examples have independent design points.
+
+**3D RANS CFD, mesh independence and experimental performance correlation remain pending for this suite.** Geometry exports and passing software tests do not establish pressure ratio, efficiency, thrust or structural integrity. Original upstream attribution and licences remain applicable.
+
+Install runtime dependencies using `python -m pip install -r requirements.txt`, then install pytest and run `python -m pytest tests -q`. MicroAxial CAD exports additionally require `python -m pip install ".[cq]"` and recursive Git submodules. See [verification notes](docs/VERIFICATION.md) for tested scope and limitations.
